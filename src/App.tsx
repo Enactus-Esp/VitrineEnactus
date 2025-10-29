@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 
 // Layout Components
 import Layout from './components/layout/Layout';
+import ScrollToTop from './components/ui/ScrollToTop';
 
 // Pages
 import Home from './pages/Home';
@@ -18,6 +19,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <AnimatePresence mode="wait">
           <Layout>
             <Routes>

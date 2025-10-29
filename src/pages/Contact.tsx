@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
       } else {
         alert("Erreur lors de l'envoi. Veuillez réessayer.");
       }
-    } catch (err) {
+    } catch {
       alert("Erreur lors de l'envoi. Veuillez réessayer.");
     } finally {
       setIsSubmitting(false);

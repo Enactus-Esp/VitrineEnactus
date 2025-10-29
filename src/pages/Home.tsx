@@ -25,28 +25,7 @@ const testimonials = [
   },
 ];
 
-// Hook pour compteurs animés
-function useCountUp(end: number, duration = 2) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    let start = 0;
-    const increment = end / (duration * 60);
-    let frame = 0;
-    function animate() {
-      frame++;
-      start += increment;
-      if (start < end) {
-        setCount(Math.floor(start));
-        requestAnimationFrame(animate);
-      } else {
-        setCount(end);
-      }
-    }
-    animate();
-    // eslint-disable-next-line
-  }, [end]);
-  return count;
-}
+
 
 import PageTransition from '../components/ui/PageTransition';
 import SectionHeader from '../components/ui/SectionHeader';
@@ -108,14 +87,12 @@ const Home: React.FC = () => {
             >
               {/* Badge d'introduction */}
               <motion.div 
-                className="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full shadow-lg border border-[#FFD800]/20"
+                className="inline-flex items-center gap-3 px-6 py-3 rounded-full"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                <div className="w-3 h-3 bg-gradient-to-r from-[#FFD800] to-[#ffb300] rounded-full animate-pulse"></div>
-                <span className="text-gray-700 font-semibold text-sm">Student Entrepreneurs</span>
-              </motion.div>
+                </motion.div>
 
               {/* Titre principal */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-gray-900 mb-6 sm:mb-8">
@@ -148,7 +125,7 @@ const Home: React.FC = () => {
                         <stat.icon size={28} className="text-black" />
                       </div>
                       <div className="text-2xl font-black mb-1 text-[#FFD800]">
-                        {typeof stat.number === 'string' ? useCountUp(cleanNumber(stat.number)) : useCountUp(stat.number)}
+                        {typeof stat.number === 'string' ? cleanNumber(stat.number) : stat.number}
                       </div>
                       <div className="text-gray-600 text-sm font-medium">{stat.label}</div>
                     </motion.div>
@@ -374,7 +351,7 @@ const Home: React.FC = () => {
                 <div className="text-4xl md:text-5xl font-black mb-3 text-[#FFD800]">
                   {typeof stat.number === 'string' && stat.number.match(/%|\$/)
                     ? stat.number // Affiche les pourcentages et montants tels quels
-                    : useCountUp(cleanNumber(stat.number))}
+                    : cleanNumber(stat.number)}
                 </div>
                 <div className="text-white/80 font-medium">{stat.label}</div>
               </motion.div>

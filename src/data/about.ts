@@ -1,5 +1,5 @@
 export const aboutData = {
-  mission: "Notre mission est d\'inciter les étudiants de l\’ESP à utiliser l\'esprit d\'entreprise et d\'innovation pour bâtir un monde meilleur. Nous mettons l\'accent sur l\'apprentissage par l\'expérience, qui catalyse la croissance personnelle et le développement professionnel de nos membres par la création de projets concrets qui améliorent les conditions de vies de nos communautés et qui surtout visent à rendre notre société meilleur. ",
+  mission: "Notre mission est d'inciter les étudiants de l'ESP à utiliser l'esprit d'entreprise et d'innovation pour bâtir un monde meilleur. Nous mettons l'accent sur l'apprentissage par l'expérience, qui catalyse la croissance personnelle et le développement professionnel de nos membres par la création de projets concrets qui améliorent les conditions de vies de nos communautés et qui surtout visent à rendre notre société meilleur. ",
   vision: "Créer un impact positif et durable dans nos communautés à travers l'entrepreneuriat social étudiant.",
   values: [
     {
@@ -12,7 +12,7 @@ export const aboutData = {
     },
     {
       title: "Excellence",
-      description: "Nous nous engageons à relever le défi de l’excellence, et nous recherchons la perfection dans toutes nos actions."
+      description: "Nous nous engageons à relever le défi de l'excellence, et nous recherchons la perfection dans toutes nos actions."
     },
     {
       title: "Engagement",

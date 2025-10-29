@@ -66,7 +66,7 @@ const ProjectDetail: React.FC = () => {
               backgroundPosition: 'center'
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/80"></div>
+                                           <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/20 to-white/40"></div>
         </div>
         
         {/* Éléments décoratifs */}
@@ -74,11 +74,11 @@ const ProjectDetail: React.FC = () => {
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-r from-[#ffb300]/15 to-[#FFD800]/15 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-gradient-to-r from-blue-200/30 to-blue-300/30 rounded-full blur-2xl animate-float" style={{ animationDelay: '1.5s' }}></div>
         
-        <div className="container mx-auto px-4 md:px-6 py-20 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 pt-20 pb-9 relative z-12">
           {/* Bouton retour */}
           <motion.button 
             onClick={() => navigate('/projects')}
-            className="flex items-center text-gray-700 hover:text-[#FFD800] transition-colors mb-8 group bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg"
+            className="flex items-center text-gray-700 hover:text-[#FFD800] transition-colors mb-8 mt-8 group bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}

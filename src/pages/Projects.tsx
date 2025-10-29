@@ -5,7 +5,7 @@ import SectionHeader from '../components/ui/SectionHeader';
 import ProjectCard from '../components/ui/ProjectCard';
 import { projects } from '../data/projects';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Filter, Search, Target, Users, Globe, Award, TrendingUp, Calendar, MapPin } from 'lucide-react';
+import { Search, Target, Users, Globe, Award, TrendingUp, Calendar, MapPin } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState('all');
@@ -45,7 +45,7 @@ const Projects: React.FC = () => {
     },
     { 
       icon: Globe, 
-      value: 8+', 
+      value: '8+',
       label: 'Communautés',
       description: 'Zones d\'intervention',
       color: 'from-blue-500 to-cyan-500'
