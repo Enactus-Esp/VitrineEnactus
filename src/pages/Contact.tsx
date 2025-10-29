@@ -89,14 +89,13 @@ const Contact: React.FC = () => {
           <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-gradient-to-r from-blue-200/30 to-blue-300/30 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 py-20 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
+        <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 relative z-10">
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden mx-2 sm:mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              {/* Badge d'introduction */}
               <motion.div 
                 className="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full shadow-lg border border-[#FFD800]/20 mb-8"
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -107,21 +106,18 @@ const Contact: React.FC = () => {
                 <span className="text-gray-700 font-semibold text-sm">Contactez-nous</span>
               </motion.div>
 
-              {/* Titre principal */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-gray-900 mb-8">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-gray-900 mb-6 sm:mb-8">
                 Parlons de <span className="bg-gradient-to-r from-[#FFD800] via-[#ffb300] to-[#FF8C00] bg-clip-text text-transparent animate-gradient-shift">
                   vos projets
                 </span>
               </h1>
 
-              {/* Sous-titre */}
-              <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-12">
                 Prêt à rejoindre notre équipe ou à collaborer sur un projet ? 
                 Contactez-nous et discutons de la façon dont nous pouvons créer un impact ensemble.
               </p>
 
-              {/* Statistiques rapides */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-16">
                 {[
                   { icon: Mail, value: '24h', label: 'Temps de réponse' },
                   { icon: Phone, value: '100%', label: 'Disponibilité' },
@@ -134,7 +130,7 @@ const Contact: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 + index * 0.1 }}
                   >
-                    <div className="w-16 h-16 bg-gradient-to-r from-[#FFD800] to-[#ffb300] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <div className="mt-0 sm:mt-1 w-16 h-16 bg-gradient-to-r from-[#FFD800] to-[#ffb300] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                       <stat.icon size={32} className="text-black" />
                     </div>
                     <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
@@ -146,22 +142,19 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Dégradé de transition */}
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
       </section>
 
-      {/* Contact Form Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white px-2 sm:px-0">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Information */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             <div>
               <SectionHeader 
                 title="Prenez Contact" 
                 subtitle="Nous sommes là pour répondre à toutes vos questions" 
               />
-              <div className="space-y-6 mt-8">
-                <div className="flex items-start">
+              <div className="space-y-6 sm:space-y-8 mt-8">
+                <div className="flex flex-col sm:flex-row items-start sm:space-x-4 space-y-4 sm:space-y-0">
                   <div className="bg-neutral-100 p-3 rounded-full mr-4">
                     <MapPin className="text-enactus-yellow" size={24} />
                   </div>
@@ -170,7 +163,7 @@ const Contact: React.FC = () => {
                     <p className="text-neutral-600">École Supérieure Polytechnique de Dakar</p>
                   </div>
                 </div>
-                <div className="flex items-start">
+                <div className="flex flex-col sm:flex-row items-start sm:space-x-4 space-y-4 sm:space-y-0">
                   <div className="bg-neutral-100 p-3 rounded-full mr-4">
                     <Mail className="text-enactus-yellow" size={24} />
                   </div>
@@ -179,7 +172,7 @@ const Contact: React.FC = () => {
                     <a href="mailto:enactus.esp@gmail.com" className="text-neutral-600 hover:text-enactus-yellow transition-colors">enactus.esp@gmail.com</a>
                   </div>
                 </div>
-                <div className="flex items-start">
+                <div className="flex flex-col sm:flex-row items-start sm:space-x-4 space-y-4 sm:space-y-0">
                   <div className="bg-neutral-100 p-3 rounded-full mr-4">
                     <Phone className="text-enactus-yellow" size={24} />
                   </div>
@@ -189,7 +182,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-12">
+              <div className="p-6 sm:p-8 md:p-12">
                 <h3 className="text-xl font-semibold mb-4">Suivez-nous</h3>
                 <div className="flex space-x-4">
                   <a href="#" className="bg-neutral-100 hover:bg-enactus-yellow p-3 rounded-full transition-colors">
@@ -212,7 +205,6 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
-            {/* Contact Form */}
             <div>
               <SectionHeader 
                 title="Envoyez-nous un Message" 
@@ -250,7 +242,7 @@ const Contact: React.FC = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-md border focus:outline-none focus:ring-2 ${
+                      className={`mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FFD800] focus:border-[#FFD800] transition duration-200 text-sm sm:text-base ${
                         errors.name 
                           ? 'border-red-300 focus:ring-red-200' 
                           : 'border-neutral-300 focus:ring-enactus-yellow/30 focus:border-enactus-yellow'
@@ -271,7 +263,7 @@ const Contact: React.FC = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-md border focus:outline-none focus:ring-2 ${
+                      className={`mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FFD800] focus:border-[#FFD800] transition duration-200 text-sm sm:text-base ${
                         errors.email 
                           ? 'border-red-300 focus:ring-red-200' 
                           : 'border-neutral-300 focus:ring-enactus-yellow/30 focus:border-enactus-yellow'
@@ -292,7 +284,7 @@ const Contact: React.FC = () => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-md border focus:outline-none focus:ring-2 ${
+                      className={`mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FFD800] focus:border-[#FFD800] transition duration-200 text-sm sm:text-base ${
                         errors.subject 
                           ? 'border-red-300 focus:ring-red-200' 
                           : 'border-neutral-300 focus:ring-enactus-yellow/30 focus:border-enactus-yellow'
@@ -304,16 +296,16 @@ const Contact: React.FC = () => {
                     )}
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-1">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       Message <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       id="message"
                       name="message"
-                      rows={5}
+                      rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-md border focus:outline-none focus:ring-2 ${
+                      className={`mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FFD800] focus:border-[#FFD800] transition duration-200 text-sm sm:text-base ${
                         errors.message 
                           ? 'border-red-300 focus:ring-red-200' 
                           : 'border-neutral-300 focus:ring-enactus-yellow/30 focus:border-enactus-yellow'
@@ -354,7 +346,6 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Map Section */}
       <motion.section
         className="py-16 bg-neutral-50"
         initial={{ opacity: 0, y: 40 }}
@@ -377,7 +368,7 @@ const Contact: React.FC = () => {
           >
             <iframe
               title="Carte ESP Dakar (Google Maps)"
-              src="https://www.google.com/maps?q=Ecole+Supérieure+Polytechnique+Dakar&output=embed"
+              src="https://www.google.com/maps?q=Ecole+Sup%C3%A9rieure+Polytechnique+Dakar&output=embed"
               className="w-full h-full border-0"
               allowFullScreen
               loading="lazy"
@@ -392,7 +383,7 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <a
-              href="https://www.google.com/maps/place/Ecole+Supérieure+Polytechnique+Dakar/@14.6935,-17.4670,17z"
+              href="https://www.google.com/maps/place/Ecole+Sup%C3%A9rieure+Polytechnique+Dakar/@14.6935,-17.4670,17z"
               target="_blank"
               rel="noopener noreferrer"
               className="text-enactus-yellow underline hover:text-amber-500"
@@ -402,8 +393,7 @@ const Contact: React.FC = () => {
           </motion.div>
         </div>
       </motion.section>
-      {/* Join Us CTA */}
-      <section className="py-16 bg-enactus-yellow">
+      <section className="py-12 sm:py-20 bg-gray-50 px-2 sm:px-0">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2 

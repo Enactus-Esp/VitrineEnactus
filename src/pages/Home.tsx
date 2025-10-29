@@ -3,11 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Globe, Target, ChevronRight, Quote, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
-// Témoignages fictifs
+// Témoignages
 const testimonials = [
   {
     name: 'Mariama Diop',
-    role: 'Membre',
+    role: 'Enactrice',
     text: "Enactus m'a permis de développer mon leadership et d'avoir un impact concret dans ma communauté !",
     image: '/IMG_8167.jpg',
   },
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
         </Helmet>
         <PageTransition>
       {/* Hero Section - Lumineux et Moderne */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-white via-[#FFD800]/10 to-[#ffb300]/20">
+      <section className="py-12 sm:py-20 bg-white px-2 sm:px-0">
         {/* Éléments décoratifs de fond */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Formes géométriques colorées */}
@@ -97,7 +97,7 @@ const Home: React.FC = () => {
           <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-gradient-to-r from-blue-200/40 to-blue-300/40 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 py-20 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Contenu principal */}
             <motion.div
@@ -118,7 +118,7 @@ const Home: React.FC = () => {
               </motion.div>
 
               {/* Titre principal */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-gray-900">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-gray-900 mb-6 sm:mb-8">
                 Entrepreneurial <br />
                 <span className="bg-gradient-to-r from-[#FFD800] via-[#ffb300] to-[#FF8C00] bg-clip-text text-transparent animate-gradient-shift">
                   Action
@@ -127,7 +127,7 @@ const Home: React.FC = () => {
               </h1>
 
               {/* Sous-titre */}
-              <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-xl">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-12 px-2 sm:px-0">
                 Nous créons un <strong className="text-[#FFD800]">impact positif durable</strong> à travers l'innovation entrepreneuriale et l'engagement communautaire.
               </p>
 
@@ -204,7 +204,7 @@ const Home: React.FC = () => {
                   <div className="space-y-4">
                     <h3 className="text-xl font-bold text-gray-900">Enactus ESP en Action</h3>
                     <p className="text-gray-600">Découvrez notre engagement terrain et nos projets qui transforment les communautés.</p>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap justify-center gap-3 sm:gap-4 px-2 sm:px-0">
                       <div className="flex -space-x-2">
                         <div className="w-8 h-8 bg-gradient-to-r from-[#FFD800] to-[#ffb300] rounded-full border-2 border-white"></div>
                         <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full border-2 border-white"></div>
@@ -236,7 +236,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Mission & Vision Section - Améliorée */}
-      <section className="section-padding bg-gradient-to-b from-white to-gray-50">
+      <section className="py-12 sm:py-20 bg-gray-50">
         <div className="container mx-auto container-padding">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="w-full flex flex-col items-center">
@@ -301,7 +301,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Projets en vedette */}
-      <section className="section-padding bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="container mx-auto container-padding">
           <SectionHeader 
             title="Projets en Vedette" 
@@ -332,7 +332,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Section Impact & Statistiques */}
-      <section className="section-padding bg-gradient-to-br from-[#0a1931] via-[#0a1931]/95 to-[#0a1931]/90 text-white relative overflow-hidden">
+      <section className="py-12 sm:py-20 bg-gradient-to-br from-[#0a1931] via-[#0a1931]/95 to-[#0a1931] text-white relative overflow-hidden">
         {/* Éléments décoratifs */}
         <div className="absolute top-20 left-20 w-40 h-40 bg-[#FFD800]/10 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 right-20 w-32 h-32 bg-[#ffb300]/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '1.5s' }}></div>
@@ -345,7 +345,7 @@ const Home: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-black mb-6 hero-text-shadow">
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-6">
               Notre <span className="gradient-text">Impact</span> en Chiffres
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -353,7 +353,7 @@ const Home: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               { number: aboutData.impact.projets, label: 'Projets Réalisés', icon: Target },
               { number: aboutData.impact.viesTouchées, label: 'Vies Touchées', icon: Users },
@@ -384,7 +384,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Section Témoignages */}
-      <section className="section-padding bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="container mx-auto container-padding">
           <SectionHeader 
             title="Témoignages" 
@@ -423,7 +423,7 @@ const Home: React.FC = () => {
                   </div>
                   
                   {/* Contenu */}
-                  <div className="lg:w-2/3 text-center lg:text-left">
+                  <div className="max-w-4xl mx-auto text-center lg:text-left">
                     <blockquote className="text-2xl md:text-3xl font-medium text-gray-800 mb-8 leading-relaxed italic">
                       "{testimonials[testimonialIdx].text}"
                     </blockquote>

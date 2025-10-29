@@ -51,8 +51,8 @@ const News: React.FC = () => {
           <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-gradient-to-r from-blue-200/30 to-blue-300/30 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 py-20 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
+        <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 relative z-10">
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden mx-2 sm:mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -70,32 +70,32 @@ const News: React.FC = () => {
               </motion.div>
 
               {/* Titre principal */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-gray-900 mb-8">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-gray-900 mb-6 sm:mb-8">
                 Restez <span className="bg-gradient-to-r from-[#FFD800] via-[#ffb300] to-[#FF8C00] bg-clip-text text-transparent animate-gradient-shift">
                   Informés
                 </span>
               </h1>
 
               {/* Sous-titre */}
-              <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-12">
                 Découvrez les dernières nouvelles, événements et mises à jour de nos projets qui transforment les communautés.
               </p>
 
               {/* Statistiques rapides */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={index}
-                    className="text-center"
+                    className="p-6 sm:p-12 text-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 + index * 0.1 }}
                   >
-                    <div className="w-16 h-16 bg-gradient-to-r from-[#FFD800] to-[#ffb300] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-[#FFD800] to-[#ffb300] rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
                       <stat.icon size={32} className="text-black" />
                     </div>
-                    <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                    <div className="text-gray-600 font-medium">{stat.label}</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1 sm:mb-2">{stat.value}</div>
+                    <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -112,7 +112,7 @@ const News: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
             {/* Filtres par catégorie */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-1 sm:gap-2">
               {categories.map((category) => (
                 <motion.button
                   key={category}
@@ -132,7 +132,7 @@ const News: React.FC = () => {
             </div>
             
             {/* Barre de recherche */}
-            <div className="relative w-full lg:w-80">
+            <div className="relative w-full sm:max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
               <input
                 type="text"
@@ -216,7 +216,7 @@ const News: React.FC = () => {
                 les événements à venir et les mises à jour de nos projets.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 mb-8 sm:mb-12">
                 <input
                   type="email"
                   placeholder="Votre adresse email"
@@ -240,7 +240,7 @@ const News: React.FC = () => {
       </section>
 
       {/* Section des réseaux sociaux */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white px-2 sm:px-0">
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
             title="Suivez-nous" 
@@ -280,8 +280,8 @@ const News: React.FC = () => {
                 <div className={`w-20 h-20 bg-gradient-to-r ${social.color} rounded-full flex items-center justify-center mx-auto mb-6 text-3xl group-hover:scale-110 transition-transform duration-300`}>
                   {social.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{social.platform}</h3>
-                <p className="text-gray-600 mb-6">{social.description}</p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">{social.platform}</h3>
+                <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">{social.description}</p>
                 <button className={`px-6 py-3 bg-gradient-to-r ${social.color} text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300`}>
                   Suivre
                 </button>
