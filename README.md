@@ -4,16 +4,6 @@ Bienvenue sur la vitrine digitale d'Enactus Sénégal, une plateforme moderne co
 
 > 🌍 **Enactus ESP - Entrepreneurial Action for a Better World**
 
-## 🎬 Aperçu de la démo
-
-Ajoutez ici un GIF de démonstration pour visualiser rapidement le site en action.
-
-```md
-![Démo du site Enactus ESP](20260604-1516-23.1121653.gif)
-```
-
-Vous pouvez remplacer `README-demo.gif` par votre propre GIF de présentation dans la racine du projet.
-
 ## 🚀 Déploiement
 
 Le site est en ligne sur Vercel :
